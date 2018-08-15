@@ -15,7 +15,19 @@ public class Time2Test
         displayTime("t3: hour and minute specified, default second" , t3 );   
         displayTime("t4: hour, minute, and second specified" , t4 );
         displayTime("t5: Time2 object t4 specified" , t5 );        
+
+        try
+        {
+            Time2 t6 = new Time2(27, 74, 99);
+        }
+        catch (IllegalArgumentException e)
+        {
+            System.out.printf("%nException while initializing t6: %s%n",
+                e.getMessage());
+            
+        }
     }
+        
     
     private static void displayTime(String header , Time2 t)
     {
